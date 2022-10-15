@@ -1,4 +1,4 @@
-## Interface: 13000
+## Interface: 112000
 ## Title: |cffff7d0aTargetInfo
 ## Notes: Addon provides extended information about the target
 ## Author: Roky

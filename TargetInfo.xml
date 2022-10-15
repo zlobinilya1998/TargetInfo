@@ -1,27 +1,76 @@
 <Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.blizzard.com/wow/ui/" xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="TargetInfo.lua" />
-
-	
-	<Button name="LFT_BTN" hidden="true" parent="UIParent" enableMouse="true" toplevel="true" frameStrata="LOW">
-		<Size x="33" y="33"/>
+	<Frame name="TI_INFO" hidden="true" parent="UIParent" enableMouse="true" toplevel="true" frameStrata="LOW">
+		<Size x="120" y="20"/>
 		<Anchors>
-		<Anchor point="LEFT" relativeTo="TargetFrame" relativePoint="LEFT"/>
+			<Anchor point="LEFT" relativeTo="TargetFrame" relativePoint="LEFT">
+				<Offset>
+					<AbsDimension x="5" y="40"/>
+				</Offset>
+			</Anchor>
 		</Anchors>
 		<Layers>
+		  <Layer level="BORDER">
+				<Texture name="$parent_Background" file="Interface\addons\TargetInfo\images\background\ui-lfg-background-scarletmonastery">
+					<Size>
+						<AbsDimension x="120" y="22"/>
+					</Size>
+				</Texture>
+			</Layer>
 			<Layer level="OVERLAY">
-				<FontString name="$parentText" inherits="GameFontWhite" text="" justifyH="LEFT">
+				<FontString name="$parent_TEXT" inherits="GameFontNormal" text="" justifyH="CENTER">
 					<Size>
 						<AbsDimension x="170" y="22"/>
 					</Size>
-					<Anchors>
-							<Anchor point="BOTTOMLEFT">
-									<Offset>
-											<AbsDimension x="10" y="45"/>
-									</Offset>
-							</Anchor>
-					</Anchors>
 				</FontString>
 			</Layer>
 		</Layers>
-	</Button>
+	</Frame>
+
+
+	<Frame name="IF_CLASS_ICONS" toplevel="true" parent="UIParent">
+        <Size>
+            <AbsDimension x="1" y="1"/>
+        </Size>
+        <Anchors>
+            <Anchor point="TOPLEFT">
+                <Offset>
+                    <AbsDimension x="0" y="0"/>
+                </Offset>
+            </Anchor>
+        </Anchors>
+        <Layers>
+            <Layer level="ARTWORK">
+                <Texture name="$parent_warrior" hidden="true" file="Interface\addons\TargetInfo\images\class\warrior">
+                    <Size>
+                        <AbsDimension x="32" y="32"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="TargetPortrait" relativePoint="TOPRIGHT">
+                            <Offset>
+                                <AbsDimension x="-15" y="0"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </Texture>
+								<Texture name="$parent_paladin" hidden="true" file="Interface\addons\TargetInfo\images\class\paladin">
+                    <Size>
+                        <AbsDimension x="32" y="32"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="TargetPortrait" relativePoint="BOTTOMLEFT">
+                            <Offset>
+                                <AbsDimension x="-5" y="20"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </Texture>
+            </Layer>
+        </Layers>
+        <Frames>
+
+        </Frames>
+
+    </Frame>
+
 </Ui>

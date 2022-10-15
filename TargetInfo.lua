@@ -29,6 +29,12 @@ local function GetClassText()
   return app.classColors[string.lower(targetClass)].c .. targetClass;
 end
 
+function ShowClassIcon()
+  local class = UnitClass('target');
+  local frameName = "IF_CLASS_ICONS_" .. string.lower(class)
+  _G[frameName]:Show();
+end
+
 app:SetScript("OnEvent", function()
   if event then
     if event == "ADDON_LOADED" and arg1 == ADDON_NAME then
@@ -40,9 +46,10 @@ app:SetScript("OnEvent", function()
       local targetClass = UnitClass('target');
       if targetClass then
         local text = GetClassText();
-        _G['LFT_BTNText']:SetText(text);
-        _G['LFT_BTN']:Show();
-      else _G['LFT_BTN']:Hide();
+        ShowClassIcon()
+        _G['TI_INFO_TEXT']:SetText(text);
+        _G['TI_INFO']:Show();
+      else _G['TI_INFO']:Hide();
       end
       
     end
