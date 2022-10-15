@@ -1,0 +1,8 @@
+## Interface: 13000
+## Title: |cffff7d0aTargetInfo
+## Notes: Addon provides extended information about the target
+## Author: Roky
+## Version: 1.0.0
+
+ChatThrottleLib/ChatThrottleLib.lua
+TargetInfo.xml

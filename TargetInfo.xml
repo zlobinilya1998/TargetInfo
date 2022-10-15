@@ -1,0 +1,27 @@
+<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.blizzard.com/wow/ui/" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="TargetInfo.lua" />
+
+	
+	<Button name="LFT_BTN" hidden="true" parent="UIParent" enableMouse="true" toplevel="true" frameStrata="LOW">
+		<Size x="33" y="33"/>
+		<Anchors>
+		<Anchor point="LEFT" relativeTo="TargetFrame" relativePoint="LEFT"/>
+		</Anchors>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText" inherits="GameFontWhite" text="" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="170" y="22"/>
+					</Size>
+					<Anchors>
+							<Anchor point="BOTTOMLEFT">
+									<Offset>
+											<AbsDimension x="10" y="45"/>
+									</Offset>
+							</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Button>
+</Ui>
